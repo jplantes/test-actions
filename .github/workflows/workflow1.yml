@@ -16,3 +16,14 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 El estado de este trabajo es ${{ job.status }}."
+
+name: Segundo Workflow (crear issue)
+run-name: Alguien creo un Issue
+on:
+  issues:
+    types: [created]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Se dispara la acción porque se creo una incidencia"
