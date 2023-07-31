@@ -2,7 +2,7 @@ name: Segundo Workflow (crear issue)
 run-name: Alguien creo un Issue
 on:
   issues:
-    types: [created]
+    types: [opened]
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
